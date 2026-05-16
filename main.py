@@ -106,7 +106,8 @@
     </div>
 
     <script>
-        const socket = io();
+        const socket = io('https://spider-iq.up.railway.app');
+
         const bgMusic = document.getElementById('bgMusic');
         let isMuted = false;
 
