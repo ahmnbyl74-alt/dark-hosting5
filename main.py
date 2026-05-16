@@ -141,23 +141,6 @@
             osc.start(); osc.stop(ctx.currentTime + 0.3);
         }
 
-        function toggleAudio() {
-            const btn = document.getElementById('audioBtn');
-            if (bgMusic.paused) {
-                bgMusic.play().catch(() => {});
-                btn.innerText = "🔊";
-                isMuted = false;
-            } else {
-                bgMusic.pause();
-                btn.innerText = "🔇";
-                isMuted = true;
-            }
-        }
-
-        function joinLobby() {
-            playClickSound();
-            // تشغيل الموسيقى الخلفية فور ضغط أول زر لكسر حظر المتصفح للأصوات
-            bgMusic.play().catch(() => {});
             
             const name = document.getElementById('usernameInput').value.trim();
             if(!name) return alert("صار زحمة بس اكتب اسمك أول شي عيني!");
